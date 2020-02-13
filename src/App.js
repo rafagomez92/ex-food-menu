@@ -1,26 +1,27 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import productsData from './productsData'
+import Product from './components/Product'
+import ShoppingCart from './components/ShoppingCart'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+const App = () => {
+  const products = productsData.map((product, idx) =>
+  <Product dato={product} key={idx} />);
+  return (  
+    <div>
+      <div class="container">
+        <div class="row">
+          <div class="col">
+          {products}
+          </div>
+          <div class="col">
+          <ShoppingCart items={products}/>      
+          </div>
+        </div>
     </div>
+  </div>      
   );
+          
 }
+
 
 export default App;
