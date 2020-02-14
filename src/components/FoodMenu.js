@@ -1,23 +1,34 @@
-import React from 'react';
-import Product from './components/Product';
-import ShoppingCart from './components/ShoppingCart';
+import React, {Component} from 'react';
+import ShoppingCart from './ShoppingCart';
 import productsData from '../productsData';
-//import shoppingCart from '../shoppingCart';
+import Menu from './Menu';
 
-const FoodMenu = () => {
-    const cartItems = [productsData[0]];
+
+class FoodMenu extends Component {
+  constructor() {
+    super();
+    this.state = {
+        products: productsData
+    };
+}
+render() {
+    const cartItems = [productsData[0],productsData[1],productsData[2]];
     return(
+        <>
         <div className="container">
             <div className="row">
               <div className="col-8">
-                <Product products={productsData}/>
+                <Menu />
               </div>            
               <div className="col-4">
                 <ShoppingCart data={cartItems}/>
               </div>        
             </div>            
-        </div>
+        </div>          
+        </>
     );
+    }
 }
+    
 
 export default FoodMenu;
