@@ -15,28 +15,6 @@ const Product = (props) => {
                 </div>
             </div>
         </div>
-
-
-
-        // <div>
-        //     <p></p>
-        //     <p>{info.price}</p>
-        //     <p>{info.description}</p>
-        // </div>
-
-
-
-
-        // <div className="card bg-secondary text-white mt-2">
-        //     <div className="card-header">                
-        //     {info.id}
-        //     </div>
-        //     <div className="card-body">
-        //         <h5 className="card-title">{info.name}</h5>
-        //         <p className="card-text">{info.description}</p>
-        //         <p>${info.price}</p>
-        //     </div>
-        // </div>
     );
 }
 
